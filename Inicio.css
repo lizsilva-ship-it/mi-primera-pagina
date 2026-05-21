@@ -1,0 +1,380 @@
+/* ===================================
+   DISEÑO MODERNO PREMIUM INSTITUCIONAL
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===== BODY ===== */
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(135deg,#eef2f7,#dfe9f3);
+    color:#2c2c2c;
+    overflow-x:hidden;
+}
+
+/* ===== SCROLL ===== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ===== HEADER ===== */
+
+.header{
+    background:linear-gradient(135deg,#141e30,#243b55);
+    display:flex;
+    align-items:center;
+    gap:25px;
+    padding:25px;
+    color:white;
+    border-bottom:4px solid #64ffda;
+    box-shadow:0px 5px 25px rgba(0,0,0,0.35);
+    position:relative;
+    overflow:hidden;
+}
+
+/* EFECTO BRILLO */
+
+.header::before{
+    content:'';
+    position:absolute;
+    width:200%;
+    height:100%;
+    background:rgba(255,255,255,0.05);
+    transform:rotate(25deg);
+    animation:brillo 8s linear infinite;
+}
+
+@keyframes brillo{
+    0%{
+        left:-150%;
+    }
+
+    100%{
+        left:150%;
+    }
+}
+
+/* ===== LOGO ===== */
+
+.header img{
+    width:200px;
+    background:white;
+    padding:10px;
+    border-radius:20px;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.4);
+    transition:0.5s;
+    z-index:2;
+}
+
+.header img:hover{
+    transform:scale(1.08) rotate(2deg);
+}
+
+/* ===== TITULOS ===== */
+
+.titulo{
+    z-index:2;
+}
+
+.titulo h1{
+    font-size:40px;
+    margin:0;
+    color:white;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.titulo h2{
+    margin-top:10px;
+    font-size:26px;
+    color:#64ffda;
+    text-shadow:1px 1px 5px rgba(0,0,0,0.4);
+}
+
+/* ===== NAV ===== */
+
+nav{
+    background:rgba(20,30,48,0.95);
+    backdrop-filter:blur(10px);
+    padding:18px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0px 4px 15px rgba(0,0,0,0.25);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:18px;
+    font-size:19px;
+    font-weight:600;
+    position:relative;
+    transition:0.4s;
+    padding:8px;
+}
+
+/* EFECTOS */
+
+nav a:hover{
+    color:#64ffda;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:3px;
+    background:#64ffda;
+    left:0;
+    bottom:-6px;
+    transition:0.4s;
+    border-radius:20px;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ===== SECCIONES ===== */
+
+section{
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(15px);
+    width:80%;
+    margin:auto;
+    margin-top:40px;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.15);
+    animation:aparecer 1s ease;
+    transition:0.5s;
+    position:relative;
+    overflow:hidden;
+}
+
+/* BORDE SUPERIOR PREMIUM */
+
+section::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#64ffda,#00bcd4,#3f51b5);
+    top:0;
+    left:0;
+}
+
+/* HOVER */
+
+section:hover{
+    transform:translateY(-8px);
+    box-shadow:0px 15px 35px rgba(0,0,0,0.2);
+}
+
+/* ===== ANIMACION ===== */
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===== TITULOS ===== */
+
+h1{
+    text-align:center;
+    font-size:45px;
+    color:#243b55;
+    margin-bottom:25px;
+    position:relative;
+}
+
+h1::after{
+    content:'';
+    width:110px;
+    height:5px;
+    background:linear-gradient(90deg,#64ffda,#00bcd4);
+    display:block;
+    margin:12px auto;
+    border-radius:20px;
+}
+
+h2{
+    font-size:32px;
+    color:#243b55;
+    margin-bottom:15px;
+}
+
+h2::after{
+    content:'';
+    width:70px;
+    height:4px;
+    background:#00bcd4;
+    display:block;
+    margin-top:8px;
+    border-radius:20px;
+}
+
+/* ===== TEXTO ===== */
+
+p{
+    font-size:19px;
+    line-height:1.9;
+    text-align:justify;
+    color:#444;
+}
+
+/* ===== IMAGENES ===== */
+
+img{
+    max-width:100%;
+    border-radius:20px;
+    margin-top:20px;
+    box-shadow:0px 8px 20px rgba(0,0,0,0.25);
+    transition:0.5s;
+}
+
+img:hover{
+    transform:scale(1.03);
+}
+
+/* ===== BOTONES ===== */
+
+button{
+    background:linear-gradient(135deg,#00bcd4,#3f51b5);
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:14px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.25);
+}
+
+button:hover{
+    transform:translateY(-4px);
+    background:linear-gradient(135deg,#64ffda,#00bcd4);
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+    background:linear-gradient(135deg,#141e30,#243b55);
+    color:white;
+    margin-top:60px;
+    padding:45px;
+    text-align:center;
+    border-top:4px solid #64ffda;
+    box-shadow:0px -5px 20px rgba(0,0,0,0.3);
+}
+
+/* CONTENIDO */
+
+.footer-contenido{
+    display:flex;
+    justify-content:center;
+    gap:45px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+/* ITEMS */
+
+.footer-item{
+    width:220px;
+    transition:0.4s;
+}
+
+.footer-item:hover{
+    transform:translateY(-5px);
+}
+
+/* ICONOS */
+
+.footer-item img{
+    width:58px;
+    background:white;
+    padding:10px;
+    border-radius:50%;
+    transition:0.5s;
+}
+
+.footer-item img:hover{
+    transform:rotate(10deg) scale(1.1);
+}
+
+/* TEXTO */
+
+.footer-item p{
+    text-align:center;
+    color:#e4e4e4;
+    margin-top:12px;
+}
+
+/* COPYRIGHT */
+
+.copy{
+    margin-top:25px;
+    color:#64ffda;
+    font-size:17px;
+    letter-spacing:1px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .titulo h1{
+        font-size:30px;
+    }
+
+    .titulo h2{
+        font-size:22px;
+    }
+
+    nav a{
+        display:block;
+        margin:15px 0;
+    }
+
+    section{
+        width:95%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:35px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    p{
+        font-size:17px;
+    }
+
+    .footer-contenido{
+        flex-direction:column;
+        align-items:center;
+    }
+}
